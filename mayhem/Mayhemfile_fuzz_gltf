@@ -1,0 +1,9 @@
+project: savantenvs/materialx
+target: fuzz_gltf
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_gltf/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_gltf
+    libfuzzer: true
+    timeout: 5
