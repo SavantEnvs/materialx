@@ -1,0 +1,10 @@
+# seed-from: https://app.mayhem.security/savantenvs/materialx/fuzz_xml
+project: savantenvs/materialx
+target: fuzz_xml-mined-e13344b
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_xml-mined-e13344b/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_xml
+    libfuzzer: true
+    timeout: 5
